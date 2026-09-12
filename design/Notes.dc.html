@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #ff7a45; } a:hover { color: #ffa077; }
+    .lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6b7386; }
+    .spec { display: flex; flex-direction: column; gap: 9px; }
+    .cap { display: flex; align-items: baseline; gap: 10px; }
+    .cap em { font-style: normal; font-size: 11px; color: #6b7386; }
+    .card { box-sizing: border-box; border-radius: 10px; padding: 12px 14px; }
+    .body { margin: 7px 0 0; font-size: 12px; line-height: 1.5; color: #a2a9b8; }
+    .tag { display: flex; align-items: center; gap: 6px; }
+    .tag span:last-child { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+    .pin { width: 5px; height: 5px; border-radius: 999px; }
+  </style>
+</helmet>
+
+<div style="box-sizing: border-box; width: 720px; height: 1080px; padding: 30px; background: #08090b;">
+
+  <div style="font-size: 20px; font-weight: 600; letter-spacing: -0.025em; color: #eef0f4;">Notes on the plan</div>
+  <div style="margin-top: 4px; font-size: 12.5px; color: #6b7386;">Six kinds of mark, each doing a different job. Colour never means decoration here.</div>
+
+  <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 26px;">
+
+    <!-- 1 -->
+    <div class="spec">
+      <div class="cap"><span class="lbl">Plan note</span><em>Why a step exists, pinned where it matters</em></div>
+      <div class="card" style="background: rgba(255,122,69,0.07); border: 1px solid rgba(255,122,69,0.28);">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span class="tag"><span class="pin" style="background: #ff7a45;"></span><span style="color: #ff7a45;">Note</span></span>
+          <span style="font-size: 10.5px; color: #6b7386;">on step 3 · Take 10 pre-orders</span>
+        </div>
+        <p class="body">Everything before this is opinion. This is the only step that tells you the truth — and &#8220;sounds great, send me the link&#8221; is a polite no until money moves.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="spec">
+      <div class="cap"><span class="lbl">Pitfall</span><em>The specific way this step goes wrong</em></div>
+      <div class="card" style="background: rgba(251,113,133,0.06); border: 1px solid rgba(251,113,133,0.26);">
+        <div class="tag"><span style="color: #fb7185; font-size: 12px; line-height: 1;">!</span><span style="color: #fb7185;">Where people get this wrong</span></div>
+        <p class="body" style="margin-top: 8px;">Posting once to your Story instead of messaging thirty people one by one. Stories get views; messages get orders.</p>
+        <p class="body" style="margin-top: 6px;">Discounting for friends. You learn nothing about whether the price works.</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="spec">
+      <div class="cap"><span class="lbl">Copy this</span><em>The exact words to paste — the most useful thing on the page</em></div>
+      <div class="card" style="background: #131620; border: 1px solid rgba(255,255,255,0.09); padding: 0;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 9px 13px; border-bottom: 1px solid rgba(255,255,255,0.09);">
+          <span class="lbl">Send on WhatsApp</span>
+          <span style="border: 1px solid rgba(255,255,255,0.16); border-radius: 6px; padding: 3px 9px; font-size: 10.5px; font-weight: 600; color: #a2a9b8;">Copy</span>
+        </div>
+        <div style="padding: 12px 13px; font-size: 11.5px; line-height: 1.6; color: #a2a9b8; white-space: pre-line;">Hey [name] — I&#39;m starting a high-protein bowl thing, delivered to your door. [Protein]g protein, [price], first deliveries on [date]. You came to mind because you [specific reason]. Want one? No pressure if not, but I&#39;d genuinely value you telling me why not.</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="spec">
+      <div class="cap"><span class="lbl">Fork, answered</span><em>Your answer, and what it changed</em></div>
+      <div class="card" style="background: #181c27; border: 1px solid rgba(255,255,255,0.24);">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="width: 11px; height: 11px; transform: rotate(45deg); border-radius: 2px; border: 1px solid rgba(255,255,255,0.4);"></span>
+          <span style="font-size: 12.5px; font-weight: 600; color: #eef0f4;">How many pre-orders actually happened?</span>
+        </div>
+        <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 5px;">
+          <div style="display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.45); border-radius: 8px; padding: 7px 10px; background: rgba(255,255,255,0.06);">
+            <span style="display: grid; place-items: center; width: 14px; height: 14px; border-radius: 999px; background: #eef0f4; color: #08090b; font-size: 9px; font-weight: 700;">&#10003;</span>
+            <span style="font-size: 11.5px; font-weight: 600; color: #eef0f4;">Four to nine</span>
+          </div>
+          <div style="border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; padding: 7px 10px; font-size: 11.5px; color: #6b7386;">Ten or more, at full price</div>
+          <div style="border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; padding: 7px 10px; font-size: 11.5px; color: #6b7386;">Three or fewer</div>
+        </div>
+        <p class="body" style="margin-top: 10px;"><span style="color: #eef0f4; font-weight: 600;">Then:</span> the customer is right, the offer is not. Keep the customer, change one thing — price, portion or delivery time — and run step 3 again.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="spec">
+      <div class="cap"><span class="lbl">Your own note</span><em>Anything you add yourself</em></div>
+      <div class="card" style="background: transparent; border: 1px dashed rgba(255,255,255,0.24);">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span class="tag"><span class="pin" style="background: #6b7386;"></span><span style="color: #6b7386;">Added by you</span></span>
+          <span style="font-size: 10.5px; color: #6b7386;">Tue</span>
+        </div>
+        <p class="body">Priya at the 6am slot said she&#39;d pay ₹280 but not ₹350. Check the cost sheet again before Saturday.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="spec">
+      <div class="cap"><span class="lbl">Done when</span><em>Observable, or it doesn&#39;t count</em></div>
+      <div class="card" style="background: #131620; border: 1px solid rgba(255,255,255,0.09);">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; align-items: flex-start; gap: 9px;">
+            <span style="display: grid; place-items: center; width: 14px; height: 14px; margin-top: 1px; border-radius: 4px; background: #eef0f4; color: #08090b; font-size: 9px; font-weight: 700;">&#10003;</span>
+            <span style="font-size: 12px; line-height: 1.45; color: #6b7386; text-decoration: line-through;">Ten people have paid, or committed to a named delivery date.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 9px;">
+            <span style="display: grid; place-items: center; width: 14px; height: 14px; margin-top: 1px; border-radius: 4px; background: #eef0f4; color: #08090b; font-size: 9px; font-weight: 700;">&#10003;</span>
+            <span style="font-size: 12px; line-height: 1.45; color: #6b7386; text-decoration: line-through;">Every address sits inside a radius you can actually deliver.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 9px;">
+            <span style="width: 14px; height: 14px; margin-top: 1px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.24);"></span>
+            <span style="font-size: 12px; line-height: 1.45; color: #eef0f4;">You wrote down, verbatim, why the people who said no said no.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

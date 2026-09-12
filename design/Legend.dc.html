@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #ff7a45; } a:hover { color: #ffa077; }
+    .lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6b7386; }
+    .grp { display: flex; flex-direction: column; gap: 11px; }
+    .r { display: flex; align-items: center; gap: 11px; }
+    .sw { width: 13px; height: 13px; border-radius: 4px; flex: none; }
+    .nm { width: 118px; font-size: 12px; font-weight: 600; color: #eef0f4; }
+    .ds { flex: 1; font-size: 11.5px; line-height: 1.4; color: #6b7386; }
+  </style>
+</helmet>
+
+<div style="box-sizing: border-box; width: 560px; height: 900px; padding: 30px; background: #08090b;">
+
+  <div style="font-size: 20px; font-weight: 600; letter-spacing: -0.025em; color: #eef0f4;">The visual language</div>
+  <div style="margin-top: 4px; font-size: 12.5px; color: #6b7386;">Every mark means one thing, and only that thing.</div>
+
+  <!-- phases -->
+  <div style="margin-top: 26px;">
+    <div class="lbl">Colour = which phase</div>
+    <div style="margin-top: 5px; font-size: 11px; line-height: 1.45; color: #6b7386;">Left swatch is the interface accent, right is the chart fill of the same hue.</div>
+    <div class="grp" style="margin-top: 14px;">
+      <div class="r"><span class="sw" style="background: #ff7a45;"></span><span class="sw" style="background: #d9581d;"></span><span class="nm">1 &#183; Prove</span><span class="ds">Money changes hands before you spend any</span></div>
+      <div class="r"><span class="sw" style="background: #2dd4bf;"></span><span class="sw" style="background: #079b8b;"></span><span class="nm">2 &#183; Repeatable</span><span class="ds">Twenty identical bowls without improvising</span></div>
+      <div class="r"><span class="sw" style="background: #a78bfa;"></span><span class="sw" style="background: #8c6fdc;"></span><span class="nm">3 &#183; Storefront</span><span class="ds">A stranger orders without messaging you</span></div>
+      <div class="r"><span class="sw" style="background: #a3e635;"></span><span class="sw" style="background: #679800;"></span><span class="nm">4 &#183; Demand</span><span class="ds">Orders from people you have never met</span></div>
+      <div class="r"><span class="sw" style="background: #38bdf8;"></span><span class="sw" style="background: #0092c6;"></span><span class="nm">5 &#183; Repeat</span><span class="ds">They order again without being chased</span></div>
+    </div>
+  </div>
+
+  <!-- reserved -->
+  <div style="margin-top: 26px;">
+    <div class="lbl">Reserved &#8212; never a phase</div>
+    <div class="grp" style="margin-top: 14px;">
+      <div class="r"><span class="sw" style="background: #fb7185;"></span><span class="sw" style="background: transparent;"></span><span class="nm">Problem</span><span class="ds">A pitfall, or a path that sends you back a step</span></div>
+      <div class="r"><span class="sw" style="background: #eef0f4;"></span><span class="sw" style="background: transparent;"></span><span class="nm">Chosen &#183; done</span><span class="ds">Your answer, or a box you ticked. Brightness, not a hue</span></div>
+      <div class="r"><span class="sw" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16);"></span><span class="sw" style="background: transparent;"></span><span class="nm">Money</span><span class="ds">Costs stay neutral so no colour means two things</span></div>
+    </div>
+  </div>
+
+  <!-- shapes -->
+  <div style="margin-top: 26px;">
+    <div class="lbl">Shape = what kind of thing</div>
+    <div class="grp" style="margin-top: 14px;">
+      <div class="r"><span style="width: 30px; height: 18px; flex: none; border-radius: 5px; background: #131620; border: 1px solid rgba(255,255,255,0.16);"></span><span class="nm" style="width: 100px;">Step</span><span class="ds">Something you go and do, in one sitting</span></div>
+      <div class="r"><span style="width: 30px; display: flex; justify-content: center; flex: none;"><span style="width: 15px; height: 15px; transform: rotate(45deg); border-radius: 3px; background: #181c27; border: 1px solid rgba(255,255,255,0.24);"></span></span><span class="nm" style="width: 100px;">Fork</span><span class="ds">A question only you can answer, mid-plan</span></div>
+      <div class="r"><span style="width: 30px; height: 18px; flex: none; border-radius: 999px; background: rgba(255,122,69,0.12); border: 1px solid rgba(255,122,69,0.4);"></span><span class="nm" style="width: 100px;">Start &#183; outcome</span><span class="ds">Where the plan begins and what it ends with</span></div>
+      <div class="r"><span style="width: 30px; height: 18px; flex: none; border-radius: 5px; background: rgba(255,122,69,0.07); border: 1px solid rgba(255,122,69,0.28);"></span><span class="nm" style="width: 100px;">Note</span><span class="ds">Context pinned beside the step it belongs to</span></div>
+    </div>
+  </div>
+
+  <!-- lines -->
+  <div style="margin-top: 26px;">
+    <div class="lbl">Line = how you get there</div>
+    <div class="grp" style="margin-top: 14px;">
+      <div class="r"><svg width="30" height="12" style="flex: none;"><path d="M0,6 L24,6" stroke="#ff7a45" stroke-width="1.6"></path><path d="M22,2 L30,6 L22,10 z" fill="#ff7a45"></path></svg><span class="nm" style="width: 100px;">Next</span><span class="ds">Straight on to the following step</span></div>
+      <div class="r"><svg width="30" height="12" style="flex: none;"><path d="M0,10 C10,10 14,2 24,2" stroke="#2dd4bf" stroke-width="1.6" fill="none"></path><path d="M22,-2 L30,2 L22,6 z" fill="#2dd4bf"></path></svg><span class="nm" style="width: 100px;">Branch</span><span class="ds">Takes the colour of the phase it lands in</span></div>
+      <div class="r"><svg width="30" height="12" style="flex: none;"><path d="M0,6 L24,6" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4 4"></path><path d="M22,2 L30,6 L22,10 z" fill="#fb7185"></path></svg><span class="nm" style="width: 100px;">Go back</span><span class="ds">Redo an earlier step with what you learned</span></div>
+    </div>
+  </div>
+
+  <!-- size -->
+  <div style="margin-top: 26px;">
+    <div class="lbl">Size = how much</div>
+    <div class="grp" style="margin-top: 14px;">
+      <div class="r"><span style="width: 30px; display: flex; align-items: center; gap: 3px; flex: none;"><span style="width: 7px; height: 7px; border-radius: 999px; background: #8c6fdc;"></span><span style="width: 13px; height: 13px; border-radius: 999px; background: #8c6fdc;"></span></span><span class="nm" style="width: 100px;">Bubble</span><span class="ds">Hours the step takes</span></div>
+      <div class="r"><span style="width: 30px; height: 10px; flex: none; border-radius: 2px 3px 3px 2px; background: #679800;"></span><span class="nm" style="width: 100px;">Bar length</span><span class="ds">Hours, or money, against a shared scale</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top: 26px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.09); font-size: 11px; line-height: 1.5; color: #6b7386;">The five phase hues were checked for colour-blind separation against this background, and every series is labelled as well as coloured — so nothing here depends on telling two colours apart.</div>
+
+</div>
+</x-dc>
+</body>
+</html>

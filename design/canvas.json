@@ -1,0 +1,32 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",    "x": 0,    "y": 0,    "w": 1440, "h": 1040, "title": "The flow" },
+    { "file": "Signals.dc.html", "x": 1560, "y": 0,    "w": 980,  "h": 900,  "title": "The graphs" },
+    { "file": "Notes.dc.html",   "x": 0,    "y": 1360, "w": 720,  "h": 1080, "title": "The notes" },
+    { "file": "Legend.dc.html",  "x": 840,  "y": 1360, "w": 560,  "h": 900,  "title": "The visual language" }
+  ],
+  "annotations": [
+    {
+      "id": "on-the-flow",
+      "x": 0,
+      "y": 1120,
+      "w": 700,
+      "text": "Why a flowchart and not a list.\n\nA list implies you do 1, then 2, then 3, and arrive. This plan doesn't work like that — two of the three forks send you backwards, and that is the normal path, not the failure path. Drawing the loops is the honest version."
+    },
+    {
+      "id": "on-the-colour",
+      "x": 760,
+      "y": 1120,
+      "w": 680,
+      "text": "One thing changed from the app.\n\nIts phase colours ran ember → lime → teal, and ember/lime are almost identical to a red-green colour-blind reader (ΔE 1.1). Swapping to ember → teal → violet → lime → sky clears every check, and it frees lime from also meaning \"free\"."
+    },
+    {
+      "id": "on-scope",
+      "x": 1560,
+      "y": 980,
+      "w": 640,
+      "text": "These are static mockups — nothing here is wired up. The numbers are the sample plan's real ones, so the charts can be argued with rather than admired."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

@@ -9,3 +9,7 @@ build/
 next-env.d.ts
 .DS_Store
 npm-debug.log*
+
+# Seeded design canvas: a generated bundle (~2.5 MB) with the canvas editor
+# baked in. The artboards beside it are the source; re-seed to rebuild.
+design/wonderwhich-plan-canvas.html

@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #ff7a45; } a:hover { color: #ffa077; }
+    .lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6b7386; }
+    .node { position: absolute; box-sizing: border-box; background: #131620; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; padding: 11px 13px; }
+    .num { display: grid; place-items: center; width: 19px; height: 19px; border-radius: 6px; font-size: 10px; font-weight: 700; }
+    .ttl { margin: 7px 0 0; font-size: 13px; line-height: 1.28; font-weight: 600; letter-spacing: -0.01em; color: #eef0f4; }
+    .meta { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 10.5px; color: #6b7386; }
+    .pill { border-radius: 999px; padding: 2px 7px; font-size: 10px; font-weight: 600; }
+    .elabel { position: absolute; box-sizing: border-box; font-size: 10px; font-weight: 600; letter-spacing: 0.01em; color: #a2a9b8; background: #0e1014; border: 1px solid rgba(255,255,255,0.09); border-radius: 6px; padding: 3px 7px; white-space: nowrap; }
+    .note { position: absolute; box-sizing: border-box; border-radius: 10px; padding: 11px 13px; background: rgba(255,122,69,0.07); border: 1px solid rgba(255,122,69,0.28); }
+    .note p { margin: 6px 0 0; font-size: 11.5px; line-height: 1.45; color: #a2a9b8; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 1440px; height: 1040px; background: #08090b; overflow: hidden;">
+
+  <!-- blueprint grid, same 44px rhythm as the app shell -->
+  <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px); background-size: 44px 44px;"></div>
+
+  <!-- ── header ─────────────────────────────────────────────── -->
+  <div style="position: absolute; left: 66px; top: 30px; display: flex; align-items: flex-start; gap: 18px;">
+    <div style="width: 18px; height: 18px; margin-top: 5px; border-radius: 5px; background: conic-gradient(from 140deg, #ff7a45, #a3e635, #a78bfa, #ff7a45);"></div>
+    <div>
+      <div style="font-size: 22px; font-weight: 600; letter-spacing: -0.025em; color: #eef0f4;">Protein bowls, delivered</div>
+      <div style="margin-top: 4px; font-size: 12.5px; color: #6b7386;">Every step, every branch, and what happens when it doesn&#39;t work — on one surface.</div>
+    </div>
+  </div>
+
+  <div style="position: absolute; right: 60px; top: 34px; display: flex; align-items: center; gap: 20px;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <div style="text-align: right;">
+        <div class="lbl">Hands-on</div>
+        <div style="margin-top: 3px; font-size: 14px; font-weight: 600; color: #eef0f4;">3.3 days</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="lbl">Steps</div>
+        <div style="margin-top: 3px; font-size: 14px; font-weight: 600; color: #eef0f4;">11</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="lbl">Forks</div>
+        <div style="margin-top: 3px; font-size: 14px; font-weight: 600; color: #eef0f4;">3</div>
+      </div>
+    </div>
+    <div style="display: flex; border: 1px solid rgba(255,255,255,0.09); border-radius: 9px; padding: 3px;">
+      <div style="border-radius: 6px; padding: 5px 11px; font-size: 11.5px; font-weight: 600; color: #eef0f4; background: #181c27;">Free</div>
+      <div style="border-radius: 6px; padding: 5px 11px; font-size: 11.5px; font-weight: 500; color: #6b7386;">Lean</div>
+      <div style="border-radius: 6px; padding: 5px 11px; font-size: 11.5px; font-weight: 500; color: #6b7386;">Pro</div>
+    </div>
+  </div>
+
+  <!-- ── swimlane bands ──────────────────────────────────────── -->
+  <div style="position: absolute; left: 66px; top: 180px; width: 250px; height: 760px; border-radius: 14px; background: rgba(255,122,69,0.035); border: 1px solid rgba(255,122,69,0.12);"></div>
+  <div style="position: absolute; left: 332px; top: 180px; width: 250px; height: 760px; border-radius: 14px; background: rgba(45,212,191,0.03); border: 1px solid rgba(45,212,191,0.1);"></div>
+  <div style="position: absolute; left: 598px; top: 180px; width: 250px; height: 760px; border-radius: 14px; background: rgba(167,139,250,0.03); border: 1px solid rgba(167,139,250,0.1);"></div>
+  <div style="position: absolute; left: 864px; top: 180px; width: 250px; height: 760px; border-radius: 14px; background: rgba(163,230,53,0.03); border: 1px solid rgba(163,230,53,0.1);"></div>
+  <div style="position: absolute; left: 1130px; top: 180px; width: 250px; height: 760px; border-radius: 14px; background: rgba(56,189,248,0.03); border: 1px solid rgba(56,189,248,0.1);"></div>
+
+  <!-- band headers -->
+  <div style="position: absolute; left: 66px; top: 112px; width: 250px;">
+    <div style="display: flex; align-items: center; gap: 8px;"><span class="num" style="background: rgba(255,122,69,0.15); color: #ff7a45;">1</span><span style="font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; color: #eef0f4;">Prove someone pays</span></div>
+    <div style="margin-top: 6px; font-size: 11px; line-height: 1.4; color: #6b7386;">Money changes hands before you spend any.</div>
+  </div>
+  <div style="position: absolute; left: 332px; top: 112px; width: 250px;">
+    <div style="display: flex; align-items: center; gap: 8px;"><span class="num" style="background: rgba(45,212,191,0.15); color: #2dd4bf;">2</span><span style="font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; color: #eef0f4;">Make it repeatable</span></div>
+    <div style="margin-top: 6px; font-size: 11px; line-height: 1.4; color: #6b7386;">20 identical bowls without improvising.</div>
+  </div>
+  <div style="position: absolute; left: 598px; top: 112px; width: 250px;">
+    <div style="display: flex; align-items: center; gap: 8px;"><span class="num" style="background: rgba(167,139,250,0.15); color: #a78bfa;">3</span><span style="font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; color: #eef0f4;">Build the storefront</span></div>
+    <div style="margin-top: 6px; font-size: 11px; line-height: 1.4; color: #6b7386;">A stranger orders without messaging you.</div>
+  </div>
+  <div style="position: absolute; left: 864px; top: 112px; width: 250px;">
+    <div style="display: flex; align-items: center; gap: 8px;"><span class="num" style="background: rgba(163,230,53,0.15); color: #a3e635;">4</span><span style="font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; color: #eef0f4;">Create demand</span></div>
+    <div style="margin-top: 6px; font-size: 11px; line-height: 1.4; color: #6b7386;">Orders from people you have never met.</div>
+  </div>
+  <div style="position: absolute; left: 1130px; top: 112px; width: 250px;">
+    <div style="display: flex; align-items: center; gap: 8px;"><span class="num" style="background: rgba(56,189,248,0.15); color: #38bdf8;">5</span><span style="font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; color: #eef0f4;">Make it repeat</span></div>
+    <div style="margin-top: 6px; font-size: 11px; line-height: 1.4; color: #6b7386;">Last month&#39;s customers order again.</div>
+  </div>
+
+  <!-- ── edges (drawn under the nodes) ───────────────────────── -->
+  <svg width="1440" height="1040" style="position: absolute; left: 0; top: 0;" aria-hidden="true">
+    <defs>
+      <marker id="aEmber" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#ff7a45"></path></marker>
+      <marker id="aTeal" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2dd4bf"></path></marker>
+      <marker id="aViolet" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#a78bfa"></path></marker>
+      <marker id="aLime" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#a3e635"></path></marker>
+      <marker id="aSky" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#38bdf8"></path></marker>
+      <marker id="aRose" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#fb7185"></path></marker>
+    </defs>
+
+    <!-- main spine, phase 1 -->
+    <path d="M191,224 L191,244" stroke="#ff7a45" stroke-width="1.6" fill="none" marker-end="url(#aEmber)"></path>
+    <path d="M191,340 L191,366" stroke="#ff7a45" stroke-width="1.6" fill="none" marker-end="url(#aEmber)"></path>
+    <path d="M191,462 L191,488" stroke="#ff7a45" stroke-width="1.6" fill="none" marker-end="url(#aEmber)"></path>
+    <path d="M191,584 L191,614" stroke="#ff7a45" stroke-width="1.6" fill="none" marker-end="url(#aEmber)"></path>
+
+    <!-- fork 1 outcomes -->
+    <path d="M257,680 C304,680 312,292 348,292" stroke="#2dd4bf" stroke-width="1.6" fill="none" marker-end="url(#aTeal)"></path>
+    <path d="M125,680 L44,680 L44,536 L82,536" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4 4" fill="none" marker-end="url(#aRose)"></path>
+    <path d="M191,746 L191,800 L22,800 L22,292 L82,292" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4 4" fill="none" marker-end="url(#aRose)"></path>
+
+    <!-- phase 2 -->
+    <path d="M457,340 L457,366" stroke="#2dd4bf" stroke-width="1.6" fill="none" marker-end="url(#aTeal)"></path>
+    <path d="M566,414 C592,414 592,292 614,292" stroke="#2dd4bf" stroke-width="1.6" fill="none" marker-end="url(#aTeal)"></path>
+
+    <!-- phase 3 -->
+    <path d="M723,340 L723,366" stroke="#a78bfa" stroke-width="1.6" fill="none" marker-end="url(#aViolet)"></path>
+    <path d="M723,462 L723,502" stroke="#a78bfa" stroke-width="1.6" fill="none" marker-end="url(#aViolet)"></path>
+
+    <!-- fork 2 outcomes -->
+    <path d="M789,568 C834,568 842,292 880,292" stroke="#a3e635" stroke-width="1.6" fill="none" marker-end="url(#aLime)"></path>
+    <path d="M723,634 L723,862 L1106,862 L1106,648 L1146,648" stroke="#38bdf8" stroke-width="1.6" fill="none" marker-end="url(#aSky)"></path>
+
+    <!-- phase 4 -->
+    <path d="M989,340 L989,366" stroke="#a3e635" stroke-width="1.6" fill="none" marker-end="url(#aLime)"></path>
+    <path d="M989,462 L989,488" stroke="#a3e635" stroke-width="1.6" fill="none" marker-end="url(#aLime)"></path>
+    <path d="M989,584 L989,634" stroke="#a3e635" stroke-width="1.6" fill="none" marker-end="url(#aLime)"></path>
+
+    <!-- fork 3 outcomes -->
+    <path d="M1055,700 C1100,700 1112,648 1146,648" stroke="#38bdf8" stroke-width="1.6" fill="none" marker-end="url(#aSky)"></path>
+    <path d="M923,700 L592,700 L592,414 L614,414" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4 4" fill="none" marker-end="url(#aRose)"></path>
+
+    <!-- phase 5 -->
+    <path d="M1255,696 L1255,740" stroke="#38bdf8" stroke-width="1.6" fill="none" marker-end="url(#aSky)"></path>
+
+    <!-- note leader -->
+    <path d="M348,540 L304,536" stroke="rgba(255,122,69,0.4)" stroke-width="1.2" stroke-dasharray="3 3" fill="none"></path>
+  </svg>
+
+  <!-- ── start ──────────────────────────────────────────────── -->
+  <div style="position: absolute; left: 82px; top: 190px; width: 218px; height: 34px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; background: rgba(255,122,69,0.12); border: 1px solid rgba(255,122,69,0.4);">
+    <span style="width: 6px; height: 6px; border-radius: 999px; background: #ff7a45;"></span>
+    <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ff7a45;">Start here</span>
+  </div>
+
+  <!-- ── step nodes ─────────────────────────────────────────── -->
+  <div class="node" style="left: 82px; top: 244px; width: 218px; height: 96px; border-color: rgba(255,122,69,0.45); box-shadow: 0 0 0 1px rgba(255,122,69,0.16);">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(255,122,69,0.15); color: #ff7a45;">1</span><span style="font-size: 10px; color: #6b7386;">45 min</span></div>
+    <div class="ttl">Pick one customer and one bowl</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>Claude</span></div>
+  </div>
+
+  <div class="node" style="left: 82px; top: 366px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(255,122,69,0.15); color: #ff7a45;">2</span><span style="font-size: 10px; color: #6b7386;">1 hour</span></div>
+    <div class="ttl">Price it so it actually makes money</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>Sheets · Claude</span></div>
+  </div>
+
+  <div class="node" style="left: 82px; top: 488px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(255,122,69,0.15); color: #ff7a45;">3</span><span style="font-size: 10px; color: #6b7386;">3 hours</span></div>
+    <div class="ttl">Take 10 pre-orders before you cook</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>WhatsApp · Forms</span></div>
+  </div>
+
+  <div class="node" style="left: 348px; top: 244px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(45,212,191,0.15); color: #2dd4bf;">4</span><span style="font-size: 10px; color: #6b7386;">2 hours</span></div>
+    <div class="ttl">Get legal before you get popular</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">Fee</span><span>Food authority</span></div>
+  </div>
+
+  <div class="node" style="left: 348px; top: 366px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(45,212,191,0.15); color: #2dd4bf;">5</span><span style="font-size: 10px; color: #6b7386;">1 cook</span></div>
+    <div class="ttl">Build a prep routine you repeat at 5am</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">Stock</span><span>Claude · Canva</span></div>
+  </div>
+
+  <div class="node" style="left: 614px; top: 244px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(167,139,250,0.15); color: #a78bfa;">6</span><span style="font-size: 10px; color: #6b7386;">2 hours</span></div>
+    <div class="ttl">Shoot the food so it sells itself</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>Phone · CapCut</span></div>
+  </div>
+
+  <div class="node" style="left: 614px; top: 366px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(167,139,250,0.15); color: #a78bfa;">7</span><span style="font-size: 10px; color: #6b7386;">3 hours</span></div>
+    <div class="ttl">Put up a page that takes orders</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>Forms · Instagram</span></div>
+  </div>
+
+  <div class="node" style="left: 880px; top: 244px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(163,230,53,0.15); color: #a3e635;">8</span><span style="font-size: 10px; color: #6b7386;">3 h + daily</span></div>
+    <div class="ttl">Run the content engine for 30 days</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>Instagram · CapCut</span></div>
+  </div>
+
+  <div class="node" style="left: 880px; top: 366px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(163,230,53,0.15); color: #a3e635;">9</span><span style="font-size: 10px; color: #6b7386;">1 hour</span></div>
+    <div class="ttl">Get found by people already searching</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>Google Business</span></div>
+  </div>
+
+  <div class="node" style="left: 880px; top: 488px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(163,230,53,0.15); color: #a3e635;">10</span><span style="font-size: 10px; color: #6b7386;">3 hours</span></div>
+    <div class="ttl">Spend your first $100 on ads, properly</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.1); color: #eef0f4;">$100</span><span>Meta Ads</span></div>
+  </div>
+
+  <div class="node" style="left: 1146px; top: 600px; width: 218px; height: 96px;">
+    <div style="display: flex; align-items: center; justify-content: space-between;"><span class="num" style="background: rgba(56,189,248,0.15); color: #38bdf8;">11</span><span style="font-size: 10px; color: #6b7386;">2 hours</span></div>
+    <div class="ttl">Make the second order automatic</div>
+    <div class="meta"><span class="pill" style="background: rgba(255,255,255,0.06); color: #a2a9b8;">$0</span><span>WhatsApp · Sheets</span></div>
+  </div>
+
+  <!-- ── outcome ────────────────────────────────────────────── -->
+  <div style="position: absolute; left: 1146px; top: 740px; width: 218px; height: 48px; box-sizing: border-box; display: flex; align-items: center; gap: 10px; padding: 0 14px; border-radius: 12px; background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.45);">
+    <span style="display: grid; place-items: center; width: 20px; height: 20px; border-radius: 999px; background: #38bdf8; color: #08090b; font-size: 11px; font-weight: 700;">&#10003;</span>
+    <span style="font-size: 12px; font-weight: 600; line-height: 1.3; color: #eef0f4;">50 paid orders,<br>repeating</span>
+  </div>
+
+
+  <!-- ── forks (decision diamonds) ───────────────────────────── -->
+  <div style="position: absolute; left: 125px; top: 614px; width: 132px; height: 132px;">
+    <div style="position: absolute; left: 19.3px; top: 19.3px; width: 93.4px; height: 93.4px; box-sizing: border-box; transform: rotate(45deg); border-radius: 12px; background: #181c27; border: 1px solid rgba(255,255,255,0.24);"></div>
+    <div style="position: absolute; inset: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 16px;">
+      <div style="font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #a2a9b8;">Fork</div>
+      <div style="margin-top: 4px; font-size: 11px; line-height: 1.25; font-weight: 600; color: #eef0f4;">10 pre-orders in 7 days?</div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 657px; top: 502px; width: 132px; height: 132px;">
+    <div style="position: absolute; left: 19.3px; top: 19.3px; width: 93.4px; height: 93.4px; box-sizing: border-box; transform: rotate(45deg); border-radius: 12px; background: #181c27; border: 1px solid rgba(255,255,255,0.24);"></div>
+    <div style="position: absolute; inset: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 16px;">
+      <div style="font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #a2a9b8;">Fork</div>
+      <div style="margin-top: 4px; font-size: 11px; line-height: 1.25; font-weight: 600; color: #eef0f4;">One-off or subscription?</div>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 923px; top: 634px; width: 132px; height: 132px;">
+    <div style="position: absolute; left: 19.3px; top: 19.3px; width: 93.4px; height: 93.4px; box-sizing: border-box; transform: rotate(45deg); border-radius: 12px; background: #181c27; border: 1px solid rgba(255,255,255,0.24);"></div>
+    <div style="position: absolute; inset: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 14px;">
+      <div style="font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #a2a9b8;">Fork</div>
+      <div style="margin-top: 4px; font-size: 11px; line-height: 1.25; font-weight: 600; color: #eef0f4;">Cost per order under your ceiling?</div>
+    </div>
+  </div>
+
+  <!-- ── branch labels ──────────────────────────────────────── -->
+  <div class="elabel" style="left: 264px; top: 604px; color: #2dd4bf; border-color: rgba(45,212,191,0.35);">10 or more &#8594;</div>
+  <div class="elabel" style="left: 52px; top: 594px; color: #fb7185; border-color: rgba(251,113,133,0.3);">4&#8211;9 &#183; change the offer</div>
+  <div class="elabel" style="left: 58px; top: 774px; color: #fb7185; border-color: rgba(251,113,133,0.3);">0&#8211;3 &#183; wrong customer</div>
+  <div class="elabel" style="left: 842px; top: 462px; color: #a3e635; border-color: rgba(163,230,53,0.35);">One-off</div>
+  <div class="elabel" style="left: 735px; top: 658px; color: #38bdf8; border-color: rgba(56,189,248,0.35);">Subscription &#8595;</div>
+  <div class="elabel" style="left: 1052px; top: 596px; color: #38bdf8; border-color: rgba(56,189,248,0.35);">Under &#8594; scale it</div>
+  <div class="elabel" style="left: 624px; top: 674px; color: #fb7185; border-color: rgba(251,113,133,0.3);">Over &#183; fix the page, not the ad</div>
+
+  <!-- ── margin notes ───────────────────────────────────────── -->
+  <div class="note" style="left: 348px; top: 500px; width: 218px;">
+    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 5px; height: 5px; border-radius: 999px; background: #ff7a45;"></span><span class="lbl" style="color: #ff7a45;">Note</span></div>
+    <p>Everything before step 3 is opinion. This is the only step that tells you the truth &#8212; and &#8220;sounds great, send me the link&#8221; is a polite no until money moves.</p>
+  </div>
+
+  <div class="note" style="left: 82px; top: 830px; width: 218px;">
+    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 5px; height: 5px; border-radius: 999px; background: #ff7a45;"></span><span class="lbl" style="color: #ff7a45;">Note</span></div>
+    <p>Both red paths are normal, not failure. Most people run this loop twice before the numbers work.</p>
+  </div>
+
+  <div class="note" style="left: 1146px; top: 244px; width: 218px; background: rgba(56,189,248,0.06); border-color: rgba(56,189,248,0.26);">
+    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 5px; height: 5px; border-radius: 999px; background: #38bdf8;"></span><span class="lbl" style="color: #38bdf8;">Note</span></div>
+    <p>Winning the same customer twice costs almost nothing. Winning a new one costs everything you just spent on ads &#8212; so fix a repeat rate under 30% before buying more traffic.</p>
+  </div>
+
+  <!-- ── legend ─────────────────────────────────────────────── -->
+  <div style="position: absolute; left: 66px; top: 962px; display: flex; align-items: center; gap: 26px;">
+    <span class="lbl">Reading the map</span>
+    <div style="display: flex; align-items: center; gap: 8px;"><span style="width: 22px; height: 14px; border-radius: 4px; background: #131620; border: 1px solid rgba(255,255,255,0.16);"></span><span style="font-size: 11px; color: #a2a9b8;">Step you do</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><span style="width: 14px; height: 14px; transform: rotate(45deg); border-radius: 3px; background: #181c27; border: 1px solid rgba(255,255,255,0.24);"></span><span style="font-size: 11px; color: #a2a9b8;">Fork &#8212; you answer it</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><svg width="26" height="8"><path d="M0,4 L26,4" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4 4"></path></svg><span style="font-size: 11px; color: #a2a9b8;">Go back and redo</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><span style="width: 22px; height: 14px; border-radius: 4px; background: rgba(255,122,69,0.07); border: 1px solid rgba(255,122,69,0.28);"></span><span style="font-size: 11px; color: #a2a9b8;">Note</span></div>
+    <div style="display: flex; align-items: center; gap: 8px;"><span style="display: grid; place-items: center; width: 14px; height: 14px; border-radius: 999px; background: #38bdf8; color: #08090b; font-size: 9px; font-weight: 700;">&#10003;</span><span style="font-size: 11px; color: #a2a9b8;">Outcome</span></div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
